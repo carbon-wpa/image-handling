@@ -1,0 +1,12 @@
+<ng-container *ngIf="!isError">
+  <div style="position: relative">
+    <img src="{{image}}" width="100%" height="100%" (error)="onImgError()" (load)="onImgLoad()"/>
+    <div class="img-replacement" *ngIf="isLoading" style="position: absolute; top: 0">
+      loading
+    </div>
+  </div>
+</ng-container>
+<div class="img-replacement" *ngIf="isError">
+  image error
+</div>
+
